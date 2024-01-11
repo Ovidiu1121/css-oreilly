@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+div {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    animation-name: moving;
+    animation-duration: 5s;
+    animation-fill-mode: both;
+    animation-delay: 3s;
+}
+
+@keyframes moving {
+
+    0% {
+        transform: translateX(500px);
+    }
+
+    50% {
+        transform: translateX(1000px);
+    }
+
+    100% {
+        transform: translate(1000px, 500px);
+    }
+}
+
+/*acest mod ne spune unde animatia elementului incepe si unde se incheie*/
+
+/*folisim FORWARDS pentru a face ca elementul sa ramana in ultima faza a animatiei*/
+
+/*folosim BACKWARDS pentru a face ca elementul sa isi inceapa miscarea de la punctul de inceput al animatiei setat de noi*/
+
+/*folosim BOTH pentru ambele FORWARDS si BACKWARDS*/

@@ -1,0 +1,25 @@
+img {
+    width: 300px;
+    display: block;
+    margin: auto;
+    margin-top: 200px;
+    transition: transform 2s;
+    transform-origin: top;
+}
+
+/*img:hover {
+    transform: translate(500px);
+}*/
+/*img:hover {
+    transform: scale(2, 2);
+}*/
+/*img:hover {
+    transform: rotate(360deg);
+}*/
+/*img:hover {
+    transform: skewY(-30deg)
+}*/
+
+img:hover {
+    transform: rotate(45deg);
+}

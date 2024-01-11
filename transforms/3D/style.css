@@ -1,0 +1,16 @@
+body {
+    perspective: 1000px;
+}
+
+img {
+    width: 300px;
+    display: block;
+    margin: auto;
+    margin-top: 200px;
+    transition: transform 2s;
+    transform-origin: top;
+}
+
+img:hover {
+    transform: rotateX(70deg);
+}
