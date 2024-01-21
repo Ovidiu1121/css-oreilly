@@ -1,0 +1,60 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 40px;
+    border: 3px solid white;
+    padding: 20px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.8s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    cursor: pointer;
+}
+
+a:before,
+a:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    transform-origin: center;
+    transition: transform 0.8s ease-in-out;
+}
+
+a:before {
+    top: 0;
+    transform: scaleY(0);
+}
+
+a:after {
+    bottom: 0;
+    transform: scaleY(0);
+}
+
+a:hover:before {
+    transform: scaleY(1);
+}
+
+a:hover:after {
+    transform: scaleY(1);
+}
+
+a:hover {
+    color: red;
+    border-color: red;
+    background-color: #222;
+}

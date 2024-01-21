@@ -1,0 +1,51 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+a {
+    padding: 30px 60px;
+    font-family: 'Arial', sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 45px;
+    letter-spacing: 2px;
+    border: 5px solid #262626;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.5s;
+}
+
+a:before,
+a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    transition: transform 0.8s ease-in-out;
+    z-index: -1;
+}
+
+a:before {
+    transform: perspective(800px) rotateX(0deg);
+}
+
+a:after {
+    transform: perspective(800px) rotateY(0deg);
+}
+
+a:hover:before {
+    transform: perspective(800px) rotateX(90deg);
+}
+
+a:hover:after {
+    transform: perspective(800px) rotateY(90deg);
+}
+
+a:hover {
+    color: black;
+}

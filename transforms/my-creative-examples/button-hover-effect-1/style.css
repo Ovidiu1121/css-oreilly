@@ -1,0 +1,37 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Arial', sans-serif;
+    font-size: 40px;
+    border: 5px solid #3498db;
+    padding: 30px 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transform-origin: bottom right;
+    transform: rotate(50deg);
+    transition: transform 1.3s, background-color 0.5s;
+}
+
+a:hover:before {
+    transform: rotate(360deg);
+    background-color: #e67e22;
+}

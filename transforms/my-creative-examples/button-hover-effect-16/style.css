@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+button {
+    border: none;
+    padding: 12px 40px;
+    background-color: red;
+    color: white;
+    font-family: 'BenchNine';
+    font-size: 22px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+button:before,
+button:after {
+    content: "";
+    position: absolute;
+    background-color: rgb(185, 237, 185);
+    transition: all 0.5s ease-in-out;
+}
+
+button:before {
+    width: 2px;
+    height: 0;
+    top: 0;
+    left: 0;
+}
+
+button:hover:before {
+    height: 100%;
+}
+
+button:after {
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    right: 0;
+}
+
+button:hover:after {
+    width: 100%;
+}
+
+button span {
+    position: relative;
+    z-index: 1;
+}
+
+button:hover span {
+    color: red;
+    transform: translateY(-3px);
+}
+
+button:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+    background-color: #bf5224;
+    color: yellow;
+}
